@@ -1,0 +1,18 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Created by david on 24.05.2018.
+ */
+public class MyStringTest {
+    @Test
+    public void testWhenHash_givenNotNull_thenExpectedHash() throws Exception {
+        //given
+        final MyString myString = new MyString("abc");
+        final int expectedHash = 1;
+        //when
+        int hash = myString.hash();
+        //then
+        assertEquals(expectedHash, hash);
+    }
+}
