@@ -12,6 +12,21 @@ public class MyString {
         if(string == null) {
             return 0;
         }
-        return 1;
+        int hash = 0;
+        for(int i = 0; i < string.length(); i++) {
+            hash += powMultiply(31, (i + 1)) * string.charAt(i);
+        }
+        return hash;
+    }
+
+    public int powMultiply(int a, int pow) {
+        if(pow == 0) {
+            return 1;
+        }
+        int result = a;
+        if(pow > 1) {
+            result = result * powMultiply(a, (pow - 1));
+        }
+        return result;
     }
 }
