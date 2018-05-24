@@ -16,5 +16,14 @@ public class MyStringTest {
         assertEquals(expectedHash, hash);
     }
 
-    
+    @Test
+    public void testWhenHash_givenNull_thenZero() throws Exception {
+        //given
+        final MyString myString = new MyString(null);
+        final int expectedHash = 0;
+        //when
+        final int hash = myString.hash();
+        //then
+        assertEquals(expectedHash, hash);
+    }
 }
