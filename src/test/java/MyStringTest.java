@@ -11,8 +11,10 @@ public class MyStringTest {
         final MyString myString = new MyString("abc");
         final int expectedHash = 1;
         //when
-        int hash = myString.hash();
+        final int hash = myString.hash();
         //then
         assertEquals(expectedHash, hash);
     }
+
+    
 }
